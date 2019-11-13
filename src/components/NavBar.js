@@ -26,9 +26,6 @@ export default function NavBar() {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    <Typography variant="h6" className={classes.title}>
-                        Yash Gupta
-                    </Typography>
 
                     <Button color="inherit">Home</Button>
                     <Button color="inherit">About</Button>
