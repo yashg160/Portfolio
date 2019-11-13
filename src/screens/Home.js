@@ -10,6 +10,12 @@ import Divider from '@material-ui/core/Divider';
 
 import Paper from '@material-ui/core/Paper';
 
+import Avatar from '@material-ui/core/Avatar';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import FacebookIcon from '@material-ui/icons/Facebook';
+
+
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -36,13 +42,35 @@ export default class Home extends React.Component {
                 <Jumbotron fluid style={{backgroundImage: `url(${computersImage})`, minHeight: 360, backgroundAttachment: 'fixed'}}>
                     
                     <Grid container direction="column" justify="center" alignItems="center" style={{marginTop: 24}}>
+                        
                         <Grid item xs={12}>
                             <Typography style={{ color: "white" }} variant='h2' align='center' gutterBottom>Hi. Nice to meet you.</Typography>
                         </Grid>
+                        
                         <Grid item xs={12}>
                             <Button variant="contained" color="primary">
                                 Download Resume
                             </Button>
+                        </Grid>
+                        
+                        <Grid item>
+                            <Grid direction="row" justify="center" alignItems="center">
+                                <Grid item xs>
+                                    <Avatar style={{ margin: 20, backgroundColor: '#0073b1' }} variant="circle">
+                                        <LinkedInIcon/>
+                                    </Avatar>
+                                </Grid>
+                                <Grid item xs>
+                                    <Avatar style={{ margin: 20, backgroundColor: '#24292e' }} variant="circle">
+                                        <GitHubIcon />
+                                    </Avatar>
+                                </Grid>
+                                <Grid item xs>
+                                    <Avatar style={{ margin: 20, backgroundColor: '#3578E5' }} variant="circle">
+                                        <FacebookIcon />
+                                    </Avatar>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
 
@@ -93,7 +121,7 @@ export default class Home extends React.Component {
                                 />
                                 <CardContent>
                                     <Typography variant="body1">
-                                        In this project, I trained a Multi Layer Perceptron on images of handwritten numbers. The model achieved grater than 95% accuracy on correctly predicting images of handwritten images. Key skills used were Python, Pytorch and Deep Learning.
+                                        In this project, I trained a Multi Layer Perceptron on images of handwritten numbers. The model achieved grater than 95% accuracy of correctly predicting images of handwritten numbers. Key skills used were Python, Pytorch and Deep Learning.
                                     </Typography>
                                 </CardContent>
                             </Card>
@@ -145,6 +173,8 @@ export default class Home extends React.Component {
                 {/* End of Projects on Home */}
 
 
+                
+
                 {/* Start of Blog Section on Home */}
                 <Jumbotron fluid style={{ backgroundImage: `url(${codeImage})`, minHeight: 360, backgroundAttachment: 'fixed' }} />
                 
@@ -156,13 +186,13 @@ export default class Home extends React.Component {
 
                     <Divider variant='middle' style={{ color: '#000' }} />
 
-                    <Grid container spacing={2} direction="row" justify="center" style={{ marginTop: 24 }}>
+                    <Grid container spacing={10} direction="row" justify="center" style={{ marginTop: 24 }}>
 
                         <Grid item sm={12} md={6}>
 
                             <Typography variant='body1'>
                                 I write weekly blog posts on Medium on development and tech related topics. Follow me on Medium to get regular updates whenever I publish a blog
-                                <a href='https://medium.com/@yashg160'> here.</a> Any claps are appreciated and dont forget to share my blogs.
+                                <a href='https://medium.com/@yashg160'> here.</a> Any claps are appreciated and remember to share my blogs.
                             </Typography>
 
                         </Grid >
@@ -175,12 +205,12 @@ export default class Home extends React.Component {
 
                                     <Typography variant="h5" align="center">
                                         Popular Blogs
-                                </Typography>
+                                    </Typography>
 
                                     <Paper style={{ padding: 16, marginTop: 20 }}>
                                         <Typography variant="h5">
                                             Creating a Chat Component With React Native
-                                </Typography>
+                                    </Typography>
 
                                         <Typography variant="body1">
                                             In this blog I explain how I created my project React Native Gifted Fire Chat. Read it <a href="https://medium.com/@yashg160/creating-a-chat-component-with-react-native-76df88074b71">here.</a>
@@ -193,7 +223,7 @@ export default class Home extends React.Component {
                                     <Paper style={{ padding: 16, marginTop: 20 }}>
                                         <Typography variant="h5">
                                             Creating a Dating App with React Native
-                                </Typography>
+                                    </Typography>
 
                                         <Typography variant="body1">
                                             In this blog series I explain how I created my project dating app Flambr. It has the highest read ratio of any of my blogs yet. Read it <a href="https://medium.com/@yashg160/create-a-dating-app-with-react-native-part-1-619d111e91ef">here</a>
@@ -209,6 +239,9 @@ export default class Home extends React.Component {
 
                 </div>
                 {/* End of Blog Section on Home */}
+
+
+
 
             </div>
         )
