@@ -10,10 +10,10 @@ import Divider from '@material-ui/core/Divider';
 
 import Paper from '@material-ui/core/Paper';
 
-import Avatar from '@material-ui/core/Avatar';
+import IconButton from '@material-ui/core/IconButton';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import FacebookIcon from '@material-ui/icons/Facebook';
+import Link from '@material-ui/core/Link';
 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -34,12 +34,22 @@ export default class Home extends React.Component {
             }
         }));
 
+        const styles = {
+            media: {
+                height: 0,
+                paddingTop: '56.25%',
+                marginTop: '30'
+            }
+        }
+
+        const numbersImage = require('../images/numbers.png');
+
         return (
             <div >
-                <NavBar />
+                <NavBar currentScreen="Home"/>
 
                 {/* Start of Jumbotron on Home */}
-                <Jumbotron fluid style={{backgroundImage: `url(${computersImage})`, minHeight: 360, backgroundAttachment: 'fixed'}}>
+                <Jumbotron fluid style={{backgroundImage: `url(${computersImage})`, minHeight: 360, maxHeight: 400, backgroundAttachment: 'fixed'}}>
                     
                     <Grid container direction="column" justify="center" alignItems="center" style={{marginTop: 24}}>
                         
@@ -53,24 +63,28 @@ export default class Home extends React.Component {
                             </Button>
                         </Grid>
                         
-                        <Grid item>
-                            <Grid direction="row" justify="center" alignItems="center">
-                                <Grid item xs>
-                                    <Avatar style={{ margin: 20, backgroundColor: '#0073b1' }} variant="circle">
-                                        <LinkedInIcon/>
-                                    </Avatar>
+                        <Grid item xs={12} justify="center" alignItems="center">
+
+                            <Grid container direction="row" justify="center" alignItems="center" style={{marginTop: 20}}>
+
+                                <Grid item>
+                                    <Link href='https://www.linkedin.com/in/yash-gupta-575679179/' color="inherit" variant="inherit" target="_blank" style={{ marginleft: 10, marginRight: 10 }}>
+                                        <IconButton style={{ backgroundColor: '#0073b1'}}>
+                                            <LinkedInIcon style={{ color: 'white', height: 32, width: 32 }}/>
+                                        </IconButton>
+                                    </Link>
                                 </Grid>
-                                <Grid item xs>
-                                    <Avatar style={{ margin: 20, backgroundColor: '#24292e' }} variant="circle">
-                                        <GitHubIcon />
-                                    </Avatar>
+
+                                <Grid item>
+                                    <Link href='https://github.com/yashg160' color='inherit' variant='inherit' target="_blank" style={{ marginleft: 10, marginRight: 10 }}>
+                                        <IconButton style={{ backgroundColor: '#24292e' }}>
+                                            <GitHubIcon style={{ color: 'white', height: 32, width: 32 }}/>
+                                        </IconButton>
+                                    </Link>
                                 </Grid>
-                                <Grid item xs>
-                                    <Avatar style={{ margin: 20, backgroundColor: '#3578E5' }} variant="circle">
-                                        <FacebookIcon />
-                                    </Avatar>
-                                </Grid>
+
                             </Grid>
+
                         </Grid>
                     </Grid>
 
@@ -105,7 +119,7 @@ export default class Home extends React.Component {
                 
                     <Divider variant='middle' style={{ color: '#000' }} />
 
-                    <Grid container spacing={2} direction="row" justify="center" alignItems="center" style={{marginTop: 24}}>
+                    <Grid container spacing={2} direction="row" justify="center" alignItems="flex-start" style={{marginTop: 24}}>
 
                         <Grid sm={12} md item>
 
@@ -116,8 +130,9 @@ export default class Home extends React.Component {
                                 />
                                 <CardMedia
                                     className={classes.media}
-                                    image="/images/computers.png"
-                                    title="Paella dish"
+                                    image={require('../images/numbers.png')}
+                                    title="MNIST Numbers Dataset"
+                                    style={styles.media}
                                 />
                                 <CardContent>
                                     <Typography variant="body1">
@@ -137,8 +152,9 @@ export default class Home extends React.Component {
                                 />
                                 <CardMedia
                                     className={classes.media}
-                                    image="/images/computers.png"
-                                    title="Paella dish"
+                                    image={require('../images/flambr.jpg')}
+                                    title="Flambr"
+                                    style={styles.media}
                                 />
                                 <CardContent>
                                     <Typography variant="body1">
@@ -157,8 +173,9 @@ export default class Home extends React.Component {
                                 />
                                 <CardMedia
                                     className={classes.media}
-                                    image="/images/computers.png"
-                                    title="Paella dish"
+                                    image={require('../images/giftedfirechat.png')}
+                                    title="React Native Gifted Fire Chat"
+                                    style={styles.media}
                                 />
                                 <CardContent>
                                     <Typography variant="body1">

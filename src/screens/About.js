@@ -15,10 +15,10 @@ export default class About extends React.Component {
     render() {
         return (
             <div>
-                <NavBar />
+                <NavBar currentScreen="About"/>
                 
                 {/* Start of Jumbotron on About */}
-                <Jumbotron fluid style={{ backgroundImage: `url(${computerImage})`, minHeight: 500, backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundRepeat:'no-repeat' }}>
+                <Jumbotron fluid style={{ backgroundImage: `url(${computerImage})`, minHeight: 360, maxHeight: 400, backgroundAttachment: 'fixed'}}>
 
                     <Grid container direction="column" justify="center" alignItems="center" style={{ marginTop: 24 }}>
 
@@ -45,7 +45,7 @@ export default class About extends React.Component {
                 <Divider variant='middle' style={{ color: '#000' }} />
 
                 <div align="center">
-                    <Avatar style={{ marginTop: 40, marginBottom: 20, width: '220px', height: '220px' }} variant="circle" src={selfImage}/>
+                    <Avatar style={{ marginTop: 40, marginBottom: 20, width: '240px', height: '240px' }} variant="circle" src={selfImage}/>
 
                     <Typography container variant='h6' align='center' style={{}}>
                         Yash Gupta
