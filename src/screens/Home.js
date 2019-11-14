@@ -3,6 +3,7 @@ import NavBar from '../components/NavBar';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import computersImage from '../images/computers.png';
 import codeImage from '../images/code.png';
+import bottomNav from '../images/bottom-navigation.png';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -22,6 +23,9 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+
 export default class Home extends React.Component {
     render() {
         const classes = makeStyles(theme => ({
@@ -31,6 +35,13 @@ export default class Home extends React.Component {
             media: {
                 height: 0,
                 paddingTop: '56.25%', // 16:9
+            },
+            root: {
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'space-around',
+                overflow: 'hidden',
+                backgroundColor: theme.palette.background.paper,
             }
         }));
 
@@ -41,8 +52,6 @@ export default class Home extends React.Component {
                 marginTop: '30'
             }
         }
-
-        const numbersImage = require('../images/numbers.png');
 
         return (
             <div >
@@ -97,7 +106,7 @@ export default class Home extends React.Component {
                     SUMMARY
                 </Typography>
                 
-                <div style={{ paddingLeft: 40, paddingRight: 40, marginBottom: 40 }}>
+                <div style={{ marginLeft: 80, marginRight: 80, marginBottom: 40 }}>
                     <Divider variant='middle' style={{color: '#000'}}/>
 
                     <Typography container variant='body1' align='center' style={{marginTop: 24}}>
@@ -136,7 +145,11 @@ export default class Home extends React.Component {
                                 />
                                 <CardContent>
                                     <Typography variant="body1">
-                                        In this project, I trained a Multi Layer Perceptron on images of handwritten numbers. The model achieved grater than 95% accuracy of correctly predicting images of handwritten numbers. Key skills used were Python, Pytorch and Deep Learning.
+                                        In this project, I trained a Multi Layer Perceptron on images of handwritten numbers. The model achieved grater than 95% accuracy of correctly predicting images of handwritten numbers.
+                                    </Typography>
+
+                                    <Typography variant="body1" style={{fontWeight: 700}}>
+                                         Key skills: Python, Pytorch and Deep Learning.
                                     </Typography>
                                 </CardContent>
                             </Card>
@@ -158,7 +171,10 @@ export default class Home extends React.Component {
                                 />
                                 <CardContent>
                                     <Typography variant="body1">
-                                        In this project, I created a cross platform mobile dating application from scratch. It provides people suggestions based on geographical location and allown them to meet new people. Users can also right swipe to like or left swipe to ignore. Key skills used were React Native, Firebase, Firestore, UI/UX Design, Database.
+                                        In this project, I created a cross platform mobile dating application from scratch. It provides people suggestions based on geographical location and allown them to meet new people. Users can also right swipe to like or left swipe to ignore. 
+                                    </Typography>
+                                    <Typography variant="body1" style={{ fontWeight: 700 }}>
+                                        Key skills: React Native, Firebase, Firestore, UI/UX Design, Database.
                                     </Typography>
                                 </CardContent>
                             </Card>
@@ -179,7 +195,10 @@ export default class Home extends React.Component {
                                 />
                                 <CardContent>
                                     <Typography variant="body1">
-                                        In this project, I created a highly customizable, reusable chat component for React Native applications. It allows two users to integrate chat functionality into their React Native apps and customize it to make it fit into their app. Key skills used were React Native, Firebase, Realtime Database, and Gifted Chat.
+                                        In this project, I created a highly customizable, reusable chat component for React Native applications. It allows two users to integrate chat functionality into their React Native apps and customize it to make it fit into their app.
+                                    </Typography>
+                                    <Typography variant="body1" style={{ fontWeight: 700 }}>
+                                         Key skills: React Native, Firebase, Realtime Database, and Gifted Chat.
                                     </Typography>
                                 </CardContent>
                             </Card>
@@ -211,6 +230,29 @@ export default class Home extends React.Component {
                                 I write weekly blog posts on Medium on development and tech related topics. Follow me on Medium to get regular updates whenever I publish a blog
                                 <a href='https://medium.com/@yashg160'> here.</a> Any claps are appreciated and remember to share my blogs.
                             </Typography>
+
+                            <div className={classes.root} style={{maxHeight: 300}}>
+                                <GridList cellHeight={160} style={{maxHeight: 300, maxWidth: 500, marginTop: 20}} cols={2}>
+                                    <GridListTile key="../images/bottom-navigation" cols={1}>
+                                        <img src={require('../images/bottom-navigation.png')} alt="Picture"/>
+                                    </GridListTile>
+                                    <GridListTile key="../images/dating-part2" cols={1}>
+                                        <img src={require('../images/dating-part2.png')} alt="Picture" />
+                                    </GridListTile>
+                                    <GridListTile key="../images/flambr-bottom-nav" cols={1}>
+                                        <img src={require('../images/flambr-bottom-nav.png')} alt="Picture" />
+                                    </GridListTile>
+                                    <GridListTile key="../images/gifted-fire-chat-image" cols={1}>
+                                        <img src={require('../images/gifted-fire-chat-image.png')} alt="Picture" />
+                                    </GridListTile>
+                                    <GridListTile key="../images/medium-stats" cols={1}>
+                                        <img src={require('../images/medium-stats.jpg')} alt="Picture" />
+                                    </GridListTile>
+                                    <GridListTile key="../images/dating-part1" cols={1}>
+                                        <img src={require('../images/dating-part1.png')} alt="Picture" />
+                                    </GridListTile>
+                                </GridList>
+                            </div>
 
                         </Grid >
 
