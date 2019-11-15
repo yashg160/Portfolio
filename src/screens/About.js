@@ -3,6 +3,8 @@ import NavBar from '../components/NavBar';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Footer from '../components/Footer';
+
 
 import computerImage from '../images/computers.png';
 import selfImage from '../images/self.png';
@@ -41,7 +43,7 @@ export default class About extends React.Component {
                     ABOUT ME
                 </Typography>
 
-                <Divider variant='middle' style={{ color: '#000' }} />
+                <Divider variant='middle' style={{ backgroundColor: 'red', height: '4px' }} />
 
                 <div align="center">
                     <Avatar style={{ marginTop: 40, marginBottom: 20, width: '240px', height: '240px' }} variant="circle" src={selfImage}/>
@@ -57,6 +59,8 @@ export default class About extends React.Component {
                     </Typography>
                 </div>
                 {/* End of About Me on About Page */}
+
+                <Footer />
             </div>
         )
     }

@@ -9,6 +9,8 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MailOutlineRoundedIcon from '@material-ui/icons/MailOutlineRounded';
 import Link from '@material-ui/core/Link';
+import Footer from '../components/Footer';
+
 
 
 import computerImage from '../images/computers.png';
@@ -43,13 +45,13 @@ export default class Contact extends React.Component {
                 {/* Start of Contact section on Contact page */}
                 <Typography variant="h4" align="center" style={{ margin: 40 }}>CONTACT ME</Typography>
                 
-                <Divider variant='middle' style={{ height: 4 }} />
+                <Divider variant='middle' style={{ backgroundColor: 'red', height: '4px' }} />
 
                 <Typography variant="h5" align="center" style={{marginTop: 40, marginBottom: 40}}>Connect with me whenever you want to. I am always available.</Typography>
                 
-                <Grid container spacing={2} direcion="row" justify="center" alignItems="center">
+                <Grid container spacing={1} direcion="row" justify="center" alignItems="center">
 
-                    <Grid item xs={12} sm={4} align="center">
+                    <Grid item xs={12} sm align="center">
                         <Link href='https://www.linkedin.com/in/yash-gupta-575679179/' color="inherit" variant="inherit" target="_blank">
                             <IconButton style={{ backgroundColor: '#0073b1' }}>
                                 <LinkedInIcon style={{ width: 80, height: 80, color: 'white' }} />
@@ -58,7 +60,7 @@ export default class Contact extends React.Component {
                         
                     </Grid>
 
-                    <Grid item xs={12} sm={4} align="center">
+                    <Grid item xs={12} sm align="center">
                         <Link href='https://github.com/yashg160' color='inherit' variant='inherit' target="_blank">
                             <IconButton style={{ backgroundColor: '#24292e' }}>
                                 <GitHubIcon style={{ width: 80, height: 80, color: 'white' }} />
@@ -67,7 +69,7 @@ export default class Contact extends React.Component {
                         
                     </Grid>
                     
-                    <Grid item xs={12} sm={4} align="center">
+                    <Grid item xs={12} sm align="center">
                         <Link href="mailto:yashg160@gmail.com" variant="inherit" color="inherit">
                             <IconButton style={{ backgroundColor: '#e63232' }}>
                                 <MailOutlineRoundedIcon style={{ width: 80, height: 80, color: 'white' }} />
@@ -79,6 +81,7 @@ export default class Contact extends React.Component {
                 </Grid>
                 {/* End of Contact section on Contact page */}
 
+                <Footer/>
             </div>
         )
     }

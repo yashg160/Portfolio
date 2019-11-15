@@ -1,9 +1,9 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import computersImage from '../images/computers.png';
 import codeImage from '../images/code.png';
-import bottomNav from '../images/bottom-navigation.png';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -105,9 +105,10 @@ export default class Home extends React.Component {
                 <Typography variant='h4' gutterBottom align='center'>
                     SUMMARY
                 </Typography>
+
+                <Divider variant='middle' style={{ backgroundColor: 'red', height: '4px', marginTop: 40, marginBottom: 40 }} />
                 
                 <div style={{ marginLeft: 80, marginRight: 80, marginBottom: 40 }}>
-                    <Divider variant='middle' style={{color: '#000'}}/>
 
                     <Typography container variant='body1' align='center' style={{marginTop: 24}}>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit et dolore, repudiandae, blanditiis ipsam atque temporibus iure itaque nesciunt nemo dolores debitis deserunt corrupti amet accusamus labore nisi eum vero!
@@ -123,10 +124,10 @@ export default class Home extends React.Component {
                 <Typography variant='h4' gutterBottom align='center'>
                     PROJECTS
                 </Typography>
+
+                <Divider variant='middle' style={{ backgroundColor: 'red', height: '4px', marginTop: 40, marginBottom: 40 }} />
                 
                 <div style={{ paddingLeft: 60, paddingRight: 60, marginBottom: 80 }}>
-                
-                    <Divider variant='middle' style={{ color: '#000' }} />
 
                     <Grid container spacing={2} direction="row" justify="center" alignItems="flex-start" style={{marginTop: 24}}>
 
@@ -203,6 +204,31 @@ export default class Home extends React.Component {
                                 </CardContent>
                             </Card>
                         </Grid>
+
+                        <Grid sm={12} md item justify="center" alignItems="center">
+
+                            <Card style={{ minHeight: 300 }}>
+                                <CardHeader
+                                    title="Personal Profolio"
+                                    subheader="November 2019"
+                                />
+                                <CardMedia
+                                    className={classes.media}
+                                    image={require('../images/flambr.jpg')}
+                                    title="Personal Protfolio"
+                                    style={styles.media}
+                                />
+                                <CardContent>
+                                    <Typography variant="body1">
+                                        In this project, I created my personal portfolio website using React.js and Material UI, a popular front end framework for React apps. In fact, you are looking at it right now.
+                                    </Typography>
+                                    <Typography variant="body1" style={{ fontWeight: 700 }}>
+                                        Key skills: React.js, Material UI, Firebase Hosting, Git and Github.
+                                    </Typography>
+                                </CardContent>
+                            </Card>
+
+                        </Grid>
                     </Grid>
 
                 </div>
@@ -218,9 +244,9 @@ export default class Home extends React.Component {
                     BLOG
                 </Typography>
 
-                <div style={{ paddingLeft: 60, paddingRight: 60, marginBottom: 80 }}>
+                <Divider variant='middle' style={{ backgroundColor: 'red', marginTop: 40, marginBottom: 40, height: '4px' }} />
 
-                    <Divider variant='middle' style={{ color: '#000' }} />
+                <div style={{ paddingLeft: 60, paddingRight: 60, marginBottom: 80 }}>
 
                     <Grid container spacing={10} direction="row" justify="center" style={{ marginTop: 24 }}>
 
@@ -232,26 +258,26 @@ export default class Home extends React.Component {
                             </Typography>
 
                             <div className={classes.root} style={{maxHeight: 300}}>
-                                <GridList cellHeight={160} style={{maxHeight: 300, maxWidth: 500, marginTop: 20}} cols={2}>
+                                {/* <GridList cellHeight={160} style={{maxHeight: 300, maxWidth: 400, marginTop: 20}} cols={2}>
                                     <GridListTile key="../images/bottom-navigation" cols={1}>
-                                        <img src={require('../images/bottom-navigation.png')} alt="Picture"/>
+                                        <img src={require('../images/bottom-navigation.png')} alt="Bottom Navigation"/>
                                     </GridListTile>
                                     <GridListTile key="../images/dating-part2" cols={1}>
-                                        <img src={require('../images/dating-part2.png')} alt="Picture" />
+                                        <img src={require('../images/dating-part2.png')} alt="Flambr Part 2" />
                                     </GridListTile>
                                     <GridListTile key="../images/flambr-bottom-nav" cols={1}>
-                                        <img src={require('../images/flambr-bottom-nav.png')} alt="Picture" />
+                                        <img src={require('../images/flambr-bottom-nav.png')} alt="Another Bottom Navigation" />
                                     </GridListTile>
                                     <GridListTile key="../images/gifted-fire-chat-image" cols={1}>
-                                        <img src={require('../images/gifted-fire-chat-image.png')} alt="Picture" />
+                                        <img src={require('../images/gifted-fire-chat-image.png')} alt="Gifted Fire Chat" />
                                     </GridListTile>
                                     <GridListTile key="../images/medium-stats" cols={1}>
-                                        <img src={require('../images/medium-stats.jpg')} alt="Picture" />
+                                        <img src={require('../images/medium-stats.jpg')} alt="Medim Stats" />
                                     </GridListTile>
                                     <GridListTile key="../images/dating-part1" cols={1}>
-                                        <img src={require('../images/dating-part1.png')} alt="Picture" />
+                                        <img src={require('../images/dating-part1.png')} alt="Flambr Part 1" />
                                     </GridListTile>
-                                </GridList>
+                                </GridList> */}
                             </div>
 
                         </Grid >
@@ -301,7 +327,7 @@ export default class Home extends React.Component {
 
 
 
-
+                <Footer/>
             </div>
         )
     }

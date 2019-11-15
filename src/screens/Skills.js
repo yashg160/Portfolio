@@ -4,6 +4,10 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import Paper from '@material-ui/core/Paper';
+import Footer from '../components/Footer';
+
+
 
 import computerImage from '../images/computers.png';
 
@@ -37,7 +41,7 @@ export default class Skills extends React.Component {
                 {/* Start of Skills section on SKills Page */}
                 <Typography variant="h4" align="center">MY SKILLS</Typography>
 
-                <Divider variant='middle' style={{ color: '#000', height: 4, marginTop: 40 }} />
+                <Divider variant='middle' style={{ backgroundColor: 'red', height: '4px', marginTop: 40 }} />
 
                 <div>
                     <Typography variant="body1" align="center" style={{marginTop: 40, marginLeft: 40, marginRight: 40, marginBottom: 40}}>
@@ -58,6 +62,34 @@ export default class Skills extends React.Component {
                 </div>
                 {/* End of skills section on skills page */}
 
+
+
+                {/* Start of experience section on Skills Page */}
+                <Typography variant="h4" align="center">EXPERIENCE</Typography>
+
+                <Divider variant='middle' style={{ backgroundColor: 'red', height: '4px', marginTop: 40 }} />
+
+                <div style={{marginLeft: 40, marginRight: 40, marginTop: 40}}>
+                    <Typography variant="body1" align="center" style={{ marginTop: 40}}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt incidunt labore delectus impedit blanditiis consectetur cumque exercitationem, tempora beatae iusto et tempore nihil perferendis autem asperiores nulla doloremque expedita vitae, voluptate odio illum laboriosam placeat animi sit! Corporis, perspiciatis vitae.
+                    </Typography>
+
+                    <Paper style={{padding: 16, marginTop: 40,}}>
+                        <Typography variant="h5">
+                            IT Technician, Honda Cars India Ltd.
+                        </Typography>
+                        <Typography variant="subtitle1">
+                            June 2019 - July 2019
+                        </Typography>
+                        <Typography component="p" style={{marginTop: 20}}>
+                            In this internship, I explored the various aspects and responsibilties of IT Asset Managment. As an intern, I got first hand experience of how the IT Department of a large MNC functions.
+                        </Typography>
+                    </Paper>
+
+                </div>
+                {/* End of experience section on Skills Page */}
+
+                <Footer />
             </div>
         )
     }
