@@ -12,7 +12,7 @@ export default class Footer extends React.Component{
                 
                 <Divider style={{marginBottom: 10}}/>
                 <Typography variant="subtitle1" align="center">
-                    Portfolio create by Yash Gupta. November 2019.
+                    Portfolio created by Yash Gupta, November 2019.
                 </Typography>
 
                 <Typography variant="body1" align="center">

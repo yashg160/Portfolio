@@ -49,7 +49,7 @@ export default class Contact extends React.Component {
 
                 <Typography variant="h5" align="center" style={{marginTop: 40, marginBottom: 40}}>Connect with me whenever you want to. I am always available.</Typography>
                 
-                <Grid container spacing={1} direcion="row" justify="center" alignItems="center">
+                <Grid container spacing={1} direcion="row" justify="center" alignItems="center" style={{marginBottom: 40}}>
 
                     <Grid item xs={12} sm align="center">
                         <Link href='https://www.linkedin.com/in/yash-gupta-575679179/' color="inherit" variant="inherit" target="_blank">

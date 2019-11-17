@@ -214,7 +214,7 @@ export default class Home extends React.Component {
                                 />
                                 <CardMedia
                                     className={classes.media}
-                                    image={require('../images/flambr.jpg')}
+                                    image={require('../images/homepage.png')}
                                     title="Personal Protfolio"
                                     style={styles.media}
                                 />
@@ -254,7 +254,7 @@ export default class Home extends React.Component {
 
                             <Typography variant='body1'>
                                 I write weekly blog posts on Medium on development and tech related topics. Follow me on Medium to get regular updates whenever I publish a blog
-                                <a href='https://medium.com/@yashg160'> here.</a> Any claps are appreciated and remember to share my blogs.
+                                <a href='https://medium.com/@yashg160' target='_blank'> here.</a> Any claps are appreciated and remember to share my blogs.
                             </Typography>
 
                             <div className={classes.root} style={{maxHeight: 300}}>
@@ -298,7 +298,7 @@ export default class Home extends React.Component {
                                     </Typography>
 
                                         <Typography variant="body1">
-                                            In this blog I explain how I created my project React Native Gifted Fire Chat. Read it <a href="https://medium.com/@yashg160/creating-a-chat-component-with-react-native-76df88074b71">here.</a>
+                                            In this blog I explain how I created my project React Native Gifted Fire Chat. Read it <a href="https://medium.com/@yashg160/creating-a-chat-component-with-react-native-76df88074b71" target='_blank'>here.</a>
                                         </Typography>
                                     </Paper>
                                 </Grid>
