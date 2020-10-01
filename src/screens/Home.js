@@ -150,7 +150,7 @@ export default class Home extends React.Component {
                                     </Typography>
 
                                     <Typography variant="body1" style={{fontWeight: 700}}>
-                                         Key skills: Python, Pytorch and Deep Learning.
+                                         Key skills: Python, Pytorch, Machine Learning.
                                     </Typography>
                                 </CardContent>
                             </Card>
